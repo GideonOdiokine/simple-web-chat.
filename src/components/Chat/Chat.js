@@ -4,7 +4,7 @@ import io from "socket.io-client";
 
 import "./Chat.css";
 
-import InfoBar from "../InfoBar/InfoBar";
+import InfoBar from "../Header/Header";
 import Input from "../Input/Input";
 import Messages from "../Messages/Messages";
 
@@ -50,6 +50,7 @@ const Chat = () => {
 			socket.emit("disconnect");
 			socket.off();
 		};
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [ENDPOINT, window.location.search]);
 
 	useEffect(() => {
